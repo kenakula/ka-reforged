@@ -22,8 +22,8 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: $font-family--;
-  color: $color-default-black;
+  font-family: $font-main;
+  color: $color-nero;
 
   background-color: $color-default-white;
 
@@ -32,7 +32,7 @@ body {
 }
 
 a {
-  color: $color-default-black;
+  color: $color-nero;
   text-decoration: none;
 }
 

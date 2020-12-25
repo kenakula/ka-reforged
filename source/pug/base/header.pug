@@ -1,9 +1,21 @@
 mixin header(currentPage, headerMod)
+  -
+    const logo = {
+      path: "content",
+      name: "logo",
+      format: "svg",
+      width: "100",
+      height: "50",
+      alt: "Лого",
+    };
 
   header(class=(headerMod) ? "header header--" + headerMod : "header")
-    .header__wrapper
-      if (currentPage === "main")
-        a.header__logo Логотип
-      else
-        a.header__logo(href="main.html", aria-label="Переход на главную") Логотип
-      block
+    .container
+      .header__wrapper
+        if (currentPage === "main")
+          a.header__logo
+            +img(logo.path, logo.name, logo.format, logo.width, logo.height, logo.alt)
+        else
+          a.header__logo(href="main.html", aria-label="Переход на главную")
+            +img(logo.path, logo.name, logo.format, logo.width, logo.height, logo.alt)
+        block

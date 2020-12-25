@@ -1,0 +1,10 @@
+mixin skillbox(props, mod)
+  - const {name, value} = props;
+  - const modClass = mod ? `skillbox--${mod}` : null;
+
+  .skillbox(class= modClass)
+    .skillbox__inner
+      h3.skillbox__name !{name}
+    .skillbox__inner
+      .skillbox__bar
+        span.skillbox__progress(data-value= value)
