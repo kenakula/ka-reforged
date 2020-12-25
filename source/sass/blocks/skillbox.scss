@@ -1,0 +1,72 @@
+.skillbox {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  min-height: 40px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include viewport--md {
+    margin: 0 auto 20px;
+    max-width: 80%;
+  }
+
+  @include viewport--sm {
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    max-width: 100%;
+  }
+}
+
+.skillbox__inner {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    width: 25%;
+
+    @include viewport--sm {
+      width: auto;
+      margin-bottom: 15px;
+    }
+  }
+
+  &:last-child {
+    flex-grow: 1;
+    padding-left: 30px;
+
+    @include viewport--sm {
+      width: 100%;
+    }
+  }
+
+  h3 {
+    @include typo(16, 24);
+
+    margin: 0;
+    margin-left: auto;
+    font-weight: 400;
+
+    @include viewport--md {
+      margin-left: 0;
+    }
+  }
+}
+
+.skillbox__bar {
+  width: 100%;
+  height: 7px;
+  border-radius: 4px;
+  background-color: rgba($color: $color-nero, $alpha: 0.2);
+}
+
+.skillbox__progress {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: 4px;
+  background: $gold-to-orange;
+}

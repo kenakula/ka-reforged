@@ -4,7 +4,7 @@
   @return $size / 16 * 1rem;
 }
 
-@mixin typography($font-size, $line-height) {
+@mixin typo($font-size, $line-height) {
   font-size: rem($font-size);
   line-height: rem($line-height);
 }
@@ -44,8 +44,7 @@
 
   cursor: pointer;
 
-  &:hover,
-  &:focus {
+  &:hover {
     opacity: 0.7;
   }
 

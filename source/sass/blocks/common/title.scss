@@ -1,0 +1,16 @@
+.title {
+  @include typo(40, 60);
+
+  margin: 0;
+  font-family: $font-title;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+
+  &--h2 {
+    @include typo(30, 44);
+  }
+
+  &--h3 {
+    @include typo(24, 36);
+  }
+}

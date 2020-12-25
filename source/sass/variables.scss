@@ -14,14 +14,19 @@ $color-black:                     #0e0e0e;
 $color-white:                     #f2f2f2;
 $color-blue:                      #2c39f2;
 
+$color-nero:                      #1a1a1a;
+$color-gold:                      #eec830;
+$color-orange:                    #f89500;
+
 // Gradient
 
-$black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
+$gold-to-orange:                    linear-gradient(90deg, $color-gold 0%, $color-orange 75%);
 
 // Typography
 //---------------------------------
 
-$font-family--:                     "", "Arial", sans-serif;
+$font-main:                     "Fira Sans", "Arial", sans-serif;
+$font-title:                     "Comfortaa", "Arial", sans-serif;
 
 // Animation
 //---------------------------------
@@ -34,7 +39,7 @@ $modal-transition-settings:         0.6s cubic-bezier(0.55, 0, 0.1, 1);
 
 $viewport--sm:                      320px;
 $viewport--md:                      768px;
-$viewport--lg:                      1024px;
+$viewport--lg:                      1200px;
 $viewport--xl:                      1440px;
 $viewport--xxl:                     1920px;
 

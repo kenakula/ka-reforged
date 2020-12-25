@@ -1,5 +1,7 @@
 $fonts: (
-  ("", "Arial", 400, normal),
+  ("Fira Sans", "fira-sans-regular", 400, normal),
+  ("Fira Sans", "fira-sans-bold", 700, normal),
+  ("Comfortaa", "comfortaa-regular", 400, normal),
 );
 
 @mixin font-face($family, $file-name, $weight, $style) {

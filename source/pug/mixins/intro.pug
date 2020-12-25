@@ -1,0 +1,18 @@
+mixin intro(props)
+  - const {intro, skills} = props;
+  - const sectionTitle = "Вводная часть";
+
+  section.intro&attributes(attributes)
+    h1.visually-hidden !{sectionTitle}
+    .container
+      .intro__inner
+        .intro__column
+          h2.intro__title.title.title--h2 !{intro.title}
+          .intro__text-wrap
+            each para in intro.paras
+              p !{para}
+        .intro__column
+          h2.intro__title.intro__title--right.title.title--h2 !{skills.title}
+          .intro__skills
+            each item in skills.list
+              +skillbox(item)
