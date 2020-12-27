@@ -1,0 +1,11 @@
+mixin works(props, mod)
+  - const modClass = mod ? `works--${mod}` : null;
+  - const {title, worksList} = props;
+
+  section.works(class= modClass)&attributes(attributes)
+    .container
+      h2.works__title.title.title--h2#works !{title}
+      .works__inner
+        each item in worksList
+          +works-card(item)
+

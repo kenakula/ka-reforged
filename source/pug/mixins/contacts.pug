@@ -1,0 +1,25 @@
+mixin contacts(props, mod)
+  - const modClass = mod ? `contacts--${mod}` : null;
+  - const {links, socials, title} = props;
+
+  section.contacts(class= modClass)
+    h2.visually-hidden !{title}
+    .container
+      .contacts__inner
+        ul.contacts__list
+          each item in links
+            +contacts-item(item)
+      .contacts__inner
+        ul.contacts__list.contacts__list--social
+          each item in socials
+            +contacts-item(item)
+
+
+mixin contacts-item(item)
+  - const {name, href, icon} = item;
+
+  li.contacts__item
+    a.contacts__link(href= href.length > 0 ? href : null)
+      if icon
+        +icon(icon.name, icon.width, icon.height)
+      span !{name}

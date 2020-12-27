@@ -1,0 +1,18 @@
+.works {
+  padding: 80px 0 40px;
+}
+
+.works__title {
+  margin-bottom: 40px;
+}
+
+.works__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 50px;
+  row-gap: 60px;
+
+  @include viewport--md {
+    grid-template-columns: 1fr 1fr;
+  }
+}

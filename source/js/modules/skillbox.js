@@ -8,7 +8,9 @@ const initSkillbox = (skillbox) => {
   const progressBar = skillbox.querySelector('.skillbox__progress');
   const value = progressBar.dataset.value;
 
-  setBarWidth(progressBar, value);
+  if (progressBar && value) {
+    setBarWidth(progressBar, value);
+  }
 };
 
 export {initSkillbox, skillboxList};
