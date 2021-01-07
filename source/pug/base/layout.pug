@@ -4,6 +4,8 @@ include footer.pug
 include modal.pug
 
 block data
+  include ../data/footer.data.pug
+
 block variables
 
 doctype html
@@ -46,7 +48,7 @@ html(class="page  no-js", lang="ru")
       .page__footer-wrapper
         block footer
           if (hasFooter)
-            +footer()
+            +footer(footerData, null)
 
     block modals
 

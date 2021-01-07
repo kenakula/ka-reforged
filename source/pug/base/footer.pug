@@ -1,2 +1,22 @@
-mixin footer(footerMod)
+mixin footer(footerData, footerMod)
+  - const title = "Соцсети";
+  - const {socials} = footerData;
+
   footer(class= (footerMod) ? "footer footer--" + footerMod : "footer")
+    h2.visually-hidden !{title}
+    .container
+      .footer__inner
+        ul.footer__list
+          each item in socials
+            +footer-item(item)
+
+
+mixin footer-item(item)
+  - const {name, href, icon} = item;
+
+  li.footer__item
+    a.footer__link(href= href.length > 0 ? href : null)
+      if icon
+        +icon(icon.name, icon.width, icon.height)
+      span !{name}
+

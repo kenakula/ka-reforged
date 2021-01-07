@@ -1,0 +1,21 @@
+mixin works-card(item, mod)
+  - const modClass = mod ? `works-card--${mod}` : null;
+  - const {name, desription, links, img, techs} = item;
+
+  .works-card(class= modClass)&attributes(attributes)
+    h3.works-card__title.title.title--h3
+      a(href="#") !{name}
+    .works-card__img-wrap
+      a(href="#")
+        +picture(img)
+    .works-card__tech-list
+      each item in techs
+        span !{item}
+    p.works-card__description !{desription}
+    .works-card__footer
+      for value, key in links
+        a.works-card__link(href= value.href, target="_blank") !{value.name}
+          if value.icon
+            - const {name, width, height} = value.icon
+            +icon(name, width, height)
+

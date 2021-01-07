@@ -1,6 +1,48 @@
 .footer {
-  min-height: 100px;
+  display: flex;
+  min-height: 70px;
   padding: 0 60px;
+  border-top: 1px solid rgba($color: $color-nero, $alpha: 0.3);
 
-  background-color: $color-blue;
+  .container {
+    display: flex;
+  }
+}
+
+.footer__inner {
+  display: flex;
+  width: 100%;
+}
+
+.footer__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  li {
+    margin-right: 10px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.footer__link {
+  @include interactive-opacity;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+
+  @include viewport--sm {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }

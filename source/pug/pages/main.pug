@@ -1,9 +1,11 @@
 extends ../base/layout.pug
 
-block data
+block append data
   include ../data/main-nav.data.pug
   include ../data/promo.data.pug
   include ../data/intro.data.pug
+  include ../data/works.data.pug
+  include ../data/contacts.data.pug
 
 block variables
   -
@@ -26,5 +28,7 @@ block main
     h1.visually-hidden !{pageTitle}
     +promo(promoData)
     +intro(introData)
+    +works(worksData)
+    +contacts(contactsData)
 
 block modals
