@@ -2,16 +2,12 @@ mixin contacts(props, mod)
   - const modClass = mod ? `contacts--${mod}` : null;
   - const {links, socials, title} = props;
 
-  section.contacts(class= modClass)
+  section.contacts#contacts(class= modClass)
     h2.visually-hidden !{title}
     .container
       .contacts__inner
         ul.contacts__list
           each item in links
-            +contacts-item(item)
-      .contacts__inner
-        ul.contacts__list.contacts__list--social
-          each item in socials
             +contacts-item(item)
 
 

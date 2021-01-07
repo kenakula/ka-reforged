@@ -1,3 +1,61 @@
 .contacts {
-  padding: 40px 0 100px;
+  padding: 40px 0 40px;
+}
+
+.contacts__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contacts__list {
+  @include list-reset;
+
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  @include viewport--sm {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+
+    @include viewport--sm {
+      margin-bottom: 15px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.contacts__link {
+  @include typo(20, 30);
+  @include transition;
+
+  display: flex;
+  align-items: center;
+
+  &[href]:hover {
+    color: $color-orange;
+  }
+
+  svg {
+    margin-right: 20px;
+  }
+
+  @include viewport--sm {
+    @include typo(16, 20);
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
 }

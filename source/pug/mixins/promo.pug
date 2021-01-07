@@ -1,9 +1,10 @@
 mixin promo(props)
   - const {text, img} = props;
   - const {path, name, format, width, height, alt} = img;
+  - const imgPath = `img/${path}/${name}`;
 
   section.promo
     .container
       p.promo__text !{text}
       .promo__img
-        +img(path, name, format, width, height, alt)
+        +picture(img)

@@ -7,7 +7,6 @@
 
 .works-card__title {
   margin-bottom: 15px;
-  // text-transform: uppercase;
   text-align: center;
 
   a {
@@ -31,11 +30,36 @@
   }
 }
 
+.works-card__tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  span {
+    @include typo(14, 20);
+
+    display: block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    padding: 2px 5px;
+    border: 1px solid rgba($color: $color-nero, $alpha: 0.3);
+    border-radius: 4px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
 .works-card__description {
   @include typo(18, 30);
 
   margin: 0;
   margin-bottom: 30px;
+
+  @include viewport--sm {
+    @include typo(16, 24);
+  }
 }
 
 .works-card__footer {
@@ -45,6 +69,10 @@
   justify-content: space-between;
   align-items: center;
   margin-top: auto;
+
+  @include viewport--sm {
+    @include typo(16, 24);
+  }
 }
 
 .works-card__link {
